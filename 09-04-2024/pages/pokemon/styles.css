@@ -1,0 +1,10 @@
+section img {
+  width: 150px;
+  height: 150px;
+}
+
+#info-pokemon img {
+  max-width: 300px; 
+  height: auto; 
+  cursor: pointer; 
+}
