@@ -1,4 +1,75 @@
-body{
-    grid-template-rows: auto 1fr auto;
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+input[type="text"], textarea {
+    width: 60%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 60%;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056a3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 60%;
+}
+
+li {
+    background: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    width: 100%;
+    position: absolute; /* Fixo no final da página */
+    bottom: 0;
+}
+
+::placeholder {
+    color: #888;
+    opacity: 1; /* Necessário para Firefox */
+}
