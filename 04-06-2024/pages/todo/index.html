@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Todo List</h1>
+      </header>
+      <main>
+        <dialog id="editDialog">
+          <form id="editTaskForm" onsubmit="updateTask(event)">
+            <input
+              type="text"
+              name="title"
+              id="editTitle"
+              required
+              placeholder="Informe o título da tarefa"
+            />
+            <textarea
+              id="editDescription"
+              name="description"
+              required
+              placeholder="Informe a descrição da tarefa"
+            ></textarea>
+            <div>
+              <button type="submit">Editar Tarefa</button>
+              <button type="button" onclick="closeDialog()">Cancelar</button>
+            </div>
+          </form>
+        </dialog>
+
+        <form id="taskForm" onsubmit="addTask(event)">
+          <input
+            type="text"
+            name="title"
+            id="taskTitle"
+            required
+            placeholder="Informe o título da tarefa"
+          />
+          <textarea
+            id="taskDescription"
+            name="description"
+            required
+            placeholder="Informe a descrição da tarefa"
+          ></textarea>
+          <button type="submit">Salvar Tarefa</button>
+        </form>
+
+        <ul id="taskList"></ul>
+      </main>
+      <footer>&copy; 2024 Todo List</footer>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
 
